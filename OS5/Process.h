@@ -18,7 +18,7 @@ class Process
 	int time_process;
 	int time_wait_count;
 	int time_go_count;
-	int priority;
+	//int priority;
 
 	
 public:
@@ -28,7 +28,7 @@ public:
 	inline int tp() { return time_process; }
 	inline int tg() { return time_go_count; }
 	inline int tw() { return time_wait_count; }
-	inline int pri() { return priority; }
+	inline int pri() { return 1; }
 
 	void tik_wait();
 	void tik_process();

@@ -34,11 +34,14 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Text.txt">
-      <Filter>Файлы ресурсов</Filter>
-    </Text>
     <Text Include="output.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="input.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

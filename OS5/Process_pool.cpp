@@ -84,7 +84,7 @@ void Process_pool::UPD(int tik)
 		}
 	}
 }
-int Process_pool::SJF_P(int tik)
+int Process_pool::PSJF(int tik)
 {
 	active;
 	int pmin = 10000;
@@ -100,29 +100,6 @@ int Process_pool::SJF_P(int tik)
 		}
 	}
 	if (was)
-	{
-		Pool[min].Set_state(ACTIVE);
-		active = min;
-	}
-	return 0;
-}
-
-int Process_pool::FCFS(int tik)
-{
-	active;
-	int tmin = 10000;
-	int min = 0;
-	bool was = false;
-	for (size_t i = 0; i < process_count; i++)
-	{
-		if (Pool[i].state() != NOT_STARTED && Pool[i].state() != FINISHED && Pool[i].tb() * (1 / Pool[i].pri()) < tmin)
-		{
-			was = true;
-			tmin = Pool[i].tb() * (1 / Pool[i].pri());
-			min = i;
-		}
-	}
-	if (was) 
 	{
 		Pool[min].Set_state(ACTIVE);
 		active = min;

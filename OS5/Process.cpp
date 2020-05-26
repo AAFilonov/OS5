@@ -10,7 +10,7 @@ istream& operator>>(istream& in, Process& B)
 {
 	in >> B.time_begin;
 	in >> B.time_process;
-	in >> B.priority;
+	// in >> B.priority;
 	return in;
 }
 

@@ -6,7 +6,7 @@
 using namespace std;
 class Process_pool
 {
-	int process_count;
+	size_t process_count;
 	size_t active;
 	vector <Process> Pool;
 public:
@@ -16,8 +16,9 @@ public:
 	void Read(string filename);
 	bool Processing_done();
 	void Print(ofstream &out);
+	vector <vector<char>> Out_Matrix();
 	void UPD(int tik);
-	int SJF_P(int tik);
+	int PSJF(int tik);
 	int FCFS(int tik);
 	ofstream& Statistic(ofstream& out);
 
